@@ -244,7 +244,7 @@ def main(df, name):
     plot_learning_curves(name, folder, train_sizes, train_scores_dict, val_scores_dict, C_range)
 
 
-if __name__ == "__main__":
+def main():
     dataset_names = [
         "female_subset",
         "male_subset",
@@ -265,3 +265,6 @@ if __name__ == "__main__":
     fairness_analysis("female_subset", "male_subset", "gender")
     fairness_analysis("rural_subset_modified", "urban_subset_modified", "region")
     fairness_analysis("highedu_subset", "lowedu_subset", "education")
+
+if __name__ == "__main__":
+    main()
